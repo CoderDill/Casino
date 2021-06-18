@@ -1,6 +1,7 @@
 
-const suits: string[] = ["Spades", "Hearts", "Diamonds", "Clubs"]
-const values: string[] = ["2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "A"];
+let suits: string[] = ["Spades", "Hearts", "Diamonds", "Clubs"]
+let values: string[] = ["2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "A"];
+
 // const player;
 // const dealer;
 
@@ -16,11 +17,15 @@ function deckOfCards(suits: string[], values: string[]) {
 }
 
 
+let cards = deckOfCards(suits, values);
 
-deckOfCards(suits, values);
 
-// const getRandCard = (cards) => {
-//     console.log(cards)
-// }
+function getRandCard(cards) {
+    let randCard = cards[Math.floor(Math.random() * cards.length)];
+    console.log(randCard)
+}
 
-// getRandCard()
+
+getRandCard(cards)
+
+export {}

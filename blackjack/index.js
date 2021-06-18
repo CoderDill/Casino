@@ -1,3 +1,5 @@
+"use strict";
+exports.__esModule = true;
 var suits = ["Spades", "Hearts", "Diamonds", "Clubs"];
 var values = ["2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "A"];
 // const player;
@@ -14,8 +16,9 @@ function deckOfCards(suits, values) {
     }
     return cards;
 }
-deckOfCards(suits, values);
-// const getRandCard = (cards) => {
-//     console.log(cards)
-// }
-// getRandCard()
+var cards = deckOfCards(suits, values);
+function getRandCard(cards) {
+    var randCard = cards[Math.floor(Math.random() * cards.length)];
+    console.log(randCard);
+}
+getRandCard(cards);
