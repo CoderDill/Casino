@@ -1,6 +1,6 @@
 const prompt = require('prompt-sync')();
-let suits: string[] = ["Spades", "Hearts", "Diamonds", "Clubs"]
-let values: string[] = ["2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "A"];
+const suits: string[] = ["Spades", "Hearts", "Diamonds", "Clubs"]
+const values: string[] = ["2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "A"];
 let player: {}[] = [];
 let dealer: {}[] = [];
 
@@ -37,7 +37,7 @@ function giveDealerCards() {
     }
     console.log(`Dealers Hand: [${dealer[0]["value"]} of ${dealer[0]["suit"]}][HIDDEN CARD]`)
 }
-// 
+
 function hit() {
    return getRandCard(cards)
 }
@@ -66,9 +66,18 @@ if (playerDecision === 'Hit' || 'Double') {
     }  
 } 
 
+
 console.log(`Dealers Hand: [${dealer[0]["value"]} of ${dealer[0]["suit"]}][${dealer[1]["value"]} of ${dealer[1]["suit"]}]`)
 let dealerDecision = prompt('CPU - Hit or Stay')
 
+const dealerDecisionfunc = (dealer) => {
+    for (let i = 0; i <= dealer.length; i++) {
+        let card1 = dealer[i]
+        console.log(card1)
+    }
+}
+dealerDecisionfunc(dealer)
+    
 if (dealerDecision === 'Hit') {
     let hitCard = hit();
     dealer.push(hitCard)

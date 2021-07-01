@@ -62,6 +62,13 @@ if (playerDecision === 'Hit' || 'Double') {
 }
 console.log("Dealers Hand: [" + dealer[0]["value"] + " of " + dealer[0]["suit"] + "][" + dealer[1]["value"] + " of " + dealer[1]["suit"] + "]");
 var dealerDecision = prompt('CPU - Hit or Stay');
+var dealerDecisionfunc = function (dealer) {
+    for (var i = 0; i <= dealer.length; i++) {
+        var card1 = dealer[i];
+        console.log(card1);
+    }
+};
+dealerDecisionfunc(dealer);
 if (dealerDecision === 'Hit') {
     var hitCard = hit();
     dealer.push(hitCard);
