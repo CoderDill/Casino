@@ -35,7 +35,6 @@ function giveDealerCards() {
     }
     console.log("Dealers Hand: [" + dealer[0]["value"] + " of " + dealer[0]["suit"] + "][HIDDEN CARD]");
 }
-// 
 function hit() {
     return getRandCard(cards);
 }
