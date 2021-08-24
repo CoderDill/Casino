@@ -1,7 +1,11 @@
-import "./BetCircle.css";
+import { Button } from "reactstrap";
 
 const BetCircle = () => {
-  return <div className="BetCircle">Bet</div>;
+  return (
+    <Button color="danger">
+      Bet
+    </Button>
+  );
 };
 
 export default BetCircle;

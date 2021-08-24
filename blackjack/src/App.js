@@ -1,11 +1,11 @@
 import Table from "./Table";
-import "./App.css";
+import { Container } from "reactstrap";
 
 function App() {
   return (
-    <div className="App">
+    <Container className="container">
       <Table />
-    </div>
+    </Container>
   );
 }
 
